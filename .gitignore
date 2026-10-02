@@ -1,0 +1,9 @@
+.DS_Store
+.vscode/.browse.VC.db*
+.vscode/ipch/
+.vs/
+build/
+*.exe
+*.ilk
+*.obj
+*.pdb

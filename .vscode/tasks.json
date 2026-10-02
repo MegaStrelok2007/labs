@@ -1,0 +1,38 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "C++: Build active file",
+            "type": "process",
+            "command": "/usr/bin/clang++",
+            "args": [
+                "-std=c++17",
+                "-Wall",
+                "-Wextra",
+                "-Wpedantic",
+                "-g",
+                "${file}",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}"
+            ],
+            "windows": {
+                "command": "cl.exe",
+                "args": [
+                    "/nologo",
+                    "/std:c++17",
+                    "/EHsc",
+                    "/W4",
+                    "/Zi",
+                    "${file}",
+                    "/Fe:${fileDirname}/${fileBasenameNoExtension}.exe"
+                ],
+                "problemMatcher": "$msCompile"
+            },
+            "problemMatcher": "$gcc",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
